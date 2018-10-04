@@ -1,0 +1,22 @@
+﻿빌드 시작: 2018-09-05 오전 8:44:31
+     1>2 노드의 "C:\Deep\GetFingerCount\Webcam\Webcam\Webcam.vcxproj" 프로젝트(build 대상)입니다.
+     1>InitializeBuildStatus:
+         "AlwaysCreate"이(가) 지정되었기 때문에 "Debug\Webcam.unsuccessfulbuild"을(를) 만들고 있습니다.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\opencv\build\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Webcam.cpp
+         Webcam.cpp
+     1>c:\deep\getfingercount\webcam\webcam\webcam.cpp(167): warning C4101: 'Err' :참조되지 않은 지역 변수입니다.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Deep\GetFingerCount\Webcam\Debug\Webcam.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:c:\opencv\build\x86\vc10\lib opencv_calib3d2411d.lib opencv_contrib2411d.lib opencv_core2411d.lib opencv_features2d2411d.lib opencv_flann2411d.lib opencv_gpu2411d.lib opencv_highgui2411d.lib opencv_imgproc2411d.lib opencv_legacy2411d.lib opencv_ml2411d.lib opencv_nonfree2411d.lib opencv_objdetect2411d.lib opencv_ocl2411d.lib opencv_photo2411d.lib opencv_stitching2411d.lib opencv_superres2411d.lib opencv_ts2411d.lib opencv_video2411d.lib opencv_videostab2411d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Webcam.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Deep\GetFingerCount\Webcam\Debug\Webcam.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Deep\GetFingerCount\Webcam\Debug\Webcam.lib" /MACHINE:X86 Debug\Webcam.obj
+     1>Webcam.obj : warning LNK4075: '/EDITANDCONTINUE'이(가) '/INCREMENTAL:NO' 사양으로 인해 무시됩니다.
+         Webcam.vcxproj -> C:\Deep\GetFingerCount\Webcam\Debug\Webcam.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Deep\GetFingerCount\Webcam\Debug\Webcam.exe;#1" /manifest Debug\Webcam.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         "Debug\Webcam.unsuccessfulbuild" 파일을 삭제하고 있습니다.
+         "Debug\Webcam.lastbuildstate"에 연결(touching)하고 있습니다.
+     1>"C:\Deep\GetFingerCount\Webcam\Webcam\Webcam.vcxproj" 프로젝트를 빌드했습니다(build 대상).
+
+빌드했습니다.
+
+경과 시간: 00:00:01.88

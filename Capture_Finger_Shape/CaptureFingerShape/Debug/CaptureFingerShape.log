@@ -1,0 +1,9 @@
+﻿Build started 2018-10-04 오후 3:34:01.
+     1>Project "G:\GetFingerCount\Capture_Finger_Shape\CaptureFingerShape\CaptureFingerShape.vcxproj" on node 2 (clean target(s)).
+     1>_PrepareForClean:
+         Deleting file "Debug\CaptureFingerShape.lastbuildstate".
+     1>Done Building Project "G:\GetFingerCount\Capture_Finger_Shape\CaptureFingerShape\CaptureFingerShape.vcxproj" (clean target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.45
