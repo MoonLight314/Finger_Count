@@ -5,11 +5,14 @@
 
 
 ### Capture_Finger_Shape
- - Visual Studio 2010. 
+ - Visual Studio 2010 / 
  - Cam으로부터 640 x 480 영상을 찍는다.
  - 영상의 R , G , B 값을 보고 피부를 선택한다.
  - 피부색과 유사한 Object를 골라내기 위해서 가장 큰 Contour(손이라고 판단)만 남기고 삭제한다.
  - 원래 크기의 절반인 320 x 240의 JPG 파일로 저장해 준다.
+ - 아래와 같은 Image가 Capture되어 저장된다.(손가락 2개 Image를 Caputre한 예)
+   ***
+   ![손가락 2개](./Images/Capture_Finger_Shape_Test_0.jpg)   ![손가락 2개](./Images/Capture_Finger_Shape_Test_1.jpg)
 
 
 ### Generate_Training_Images
