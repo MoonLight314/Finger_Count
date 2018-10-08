@@ -19,7 +19,9 @@
  - Python 3.5.
  - Data Augmentation
  - JPG File을 읽어서 회전 / 크기변경 / 위치 이동 등을 하여 학습 Data의 양을 증가시킨다.
- - 
+ - 1번 Step에서 Capture한 손가락 Image를 손가락 개수 별로 각 폴더에 넣어둔다.
+ - 실행하여 원하는 손가락 개수 폴더를 선택하고, 원하는 동작(회전 / 크기변경 / 위치 이동)을 선택하고 각 동작별 Parameter를 입력하면 해당하는 Data Augmentation 동작을 수행한다.
+ - Training Data양이 많지 않을 경우에 유용하다.
  - 출력은 320 x 240 JPG 
 
 
