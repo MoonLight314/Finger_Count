@@ -63,3 +63,8 @@
 
 
 
+### 5. FingerCount_Training
+ - 지금까지 준비한 Data로 CNN 학습을 하는 Tensorflow Code
+ - \Learning_Data_BIN\Training Folder내에 TrainingDataSet_xxxx.dat 와 그에 해당하는 CorrectAns_xxxx.dat을 넣어둔다.
+ - 4층의 Conv. Layer를 두고, 각 Conv. Layer마다 ReLU , Max Pool , Drop Out(0.7)을 적용하였다.
+ - 학습이 완료된 후에는 \SaveModel 에 학습된 신경망이 저장된다.
