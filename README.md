@@ -42,5 +42,24 @@
 
 ### 4. ChooseTrainingTestDataSet
  - Visual Studio 2010. 
- - 변환된 Binary File을 읽어서 N개 단위로 묶어서 하나의 Binary File로 만든다.
- - 이때 정답도 함께 만든다.
+ - Step 3에서 변환된 Binary File을 읽어서 N개 단위(Batch Size)로 묶어서 하나의 Binary File로 만든다.
+ - 묶음으로 만들때는 Random하게 선택해서 만들도록 한다.
+ - Batch Size는 아래 상수
+ <pre><code>
+ const int	ONE_BATCH_SIZE = 100;
+ </code></pre>
+ - Step 3에서 만든 Binary File의 개수를 직접 아래 배열에 입력해 준다.(자동으로 하도록 하고 싶었지만, 귀차니즘....)
+ <pre><code>
+ int		NUM_OF_IMAGE[] = { 10900 , 9300 ,  8800, 9200 , 7800 , 7900 }; // 순서대로 0부터 5개 손가락 개수 Test Image 수
+ </code></pre>
+ - Step 3에서 작성한 Data File의 Path는 아래와 같이 지정한다. 각자 Path에 맞게 수정하자.
+ <pre><code>
+ _stprintf(SrcPath , _T("C:\\Deep\\GetFingerCount\\TransformImgData\\TransformImgData\\TransformImgData\\%d\\%05d.bin"), Folder , FileNumber );
+ </code></pre> 
+ - Training Data와 Answer도 함께 만든다.
+ - Training Data File Naming : TrainingDataSet_xxxx.dat
+ - Answer File Naming : CorrectAns_xxxx.dat
+ 
+
+
+
