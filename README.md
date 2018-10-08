@@ -4,7 +4,7 @@
 * 각 Step 마다 사용된 Application을 아래에 소개하겠다.
 
 
-### Capture_Finger_Shape
+### 1. Capture_Finger_Shape
  - Visual Studio 2010 / 
  - Cam으로부터 640 x 480 영상을 찍는다.
  - 영상의 R , G , B 값을 보고 피부를 선택한다.
@@ -15,21 +15,22 @@
    ![손가락 2개](./Images/Capture_Finger_Shape_Test_0.jpg)   ![손가락 2개](./Images/Capture_Finger_Shape_Test_1.jpg)
 
 
-### Generate_Training_Images
+### 2. Generate_Training_Images
  - Python 3.5.
  - Data Augmentation
  - JPG File을 읽어서 회전 / 크기변경 / 위치 이동 등을 하여 학습 Data의 양을 증가시킨다.
- - 출력은 640 x 480 JPG 
+ - 
+ - 출력은 320 x 240 JPG 
 
 
-### TransformImgData
+### 3. TransformImgData
  - Visual Studio 2010. 
  - 640 x 480 JPG 파일을 읽어서 각 Pixel을 0x00 or 0xFF 으로 변환하여 Binary File을 만들어준다.
  - 이때 Size를 축소할 수 있다.
  - 변환된 Binary File의 크기는 축소된 크기에 따라 가변
 
 
-### ChooseTrainingTestDataSet
+### 4. ChooseTrainingTestDataSet
  - Visual Studio 2010. 
  - 변환된 Binary File을 읽어서 N개 단위로 묶어서 하나의 Binary File로 만든다.
  - 이때 정답도 함께 만든다.
