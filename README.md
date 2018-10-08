@@ -22,14 +22,22 @@
  - 1번 Step에서 Capture한 손가락 Image를 손가락 개수 별로 각 폴더에 넣어둔다.
  - 실행하여 원하는 손가락 개수 폴더를 선택하고, 원하는 동작(회전 / 크기변경 / 위치 이동)을 선택하고 각 동작별 Parameter를 입력하면 해당하는 Data Augmentation 동작을 수행한다.
  - Training Data양이 많지 않을 경우에 유용하다.
+ - 저의 경우에는 1번 Step에서 각 손가락 개수별로 20~30장 정도 Capture하고, 2번 Step에서 각 손가락 개수별로 8~9000장 준비하였다.
  - 출력은 320 x 240 JPG 
 
 
 ### 3. TransformImgData
  - Visual Studio 2010. 
- - 640 x 480 JPG 파일을 읽어서 각 Pixel을 0x00 or 0xFF 으로 변환하여 Binary File을 만들어준다.
- - 이때 Size를 축소할 수 있다.
- - 변환된 Binary File의 크기는 축소된 크기에 따라 가변
+ - 2번 Step에서 작성된 320 x 240 JPG 파일을 읽어서 각 Pixel을 0x00 or 0xFF 으로 변환하여 Binary File을 만들어준다.
+ - Image File을 Tensorflow가 학습할 수 있는 형태로 변환하는 과정임.
+ - 2번 Step에서 작성된 Image File들의 Path와 출력할 Binary File들이 저장될 Path를 지정해 줘야 한다.
+ <pre><code>
+ /* 변환할 Image File의 위치 */
+ sprintf(tmp,"C:\\Deep\\GetFingerCount\\Generate_Training_Images\\%d\\*.jpg" , i);
+ /* 출력할 Image File의 위치 */
+ sprintf(OpenFileName, "C:\\Deep\\GetFingerCount\\Generate_Training_Images\\%d\\%s", i , fd.name );
+ </code></pre>
+ - 변환된 Binary File은 0부터 증가하는 Index번호로 File Name이 정해진다.
 
 
 ### 4. ChooseTrainingTestDataSet
