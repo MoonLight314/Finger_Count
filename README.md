@@ -68,3 +68,19 @@
  - \Learning_Data_BIN\Training Folder내에 TrainingDataSet_xxxx.dat 와 그에 해당하는 CorrectAns_xxxx.dat을 넣어둔다.
  - 4층의 Conv. Layer를 두고, 각 Conv. Layer마다 ReLU , Max Pool , Drop Out(0.7)을 적용하였다.
  - 학습이 완료된 후에는 \SaveModel 에 학습된 신경망이 저장된다.
+
+
+### 6. GetFingerCount_Py / GetFingerCount_Cam
+ - 학습한 Model을 이용하여, 실시간으로 Webcam으로부터 받은 손가락 영상에서 손가락 개수를 Count하여 보여준다.
+ - 동작방식은 GetFingerCount_Py을 실행하여 학습한 Model을 Load한 후 Cam으로부터 받은 영상을 기다린다.
+ - Cam으로 입력받은 영상은 학습할 때와 동일한 방식의 Binary File로 변환된 후, 특정 Folder에 저장된다.( GetFingerCount_Cam )
+ - 예제에서 사용한 위치. 아래 위치를 상황에 맞게 변경하면 된다.
+ <pre><code>
+ FILE *fp = fopen("C:\\Deep\\GetFingerCount\\data.bin","wb");
+ </code></pre>  
+ - GetFingerCount_Py은 data.bin을 읽어 학습 Model에 입력한 후, 결과를 특정 Folder에 저장한다.
+ - 예제에서 사용한 위치. 아래 위치를 상황에 맞게 변경하면 된다.
+ <pre><code>
+ if not os.path.exists("C:/Deep/GetFingerCount/result.dat"):
+ </code></pre>  
+ - GetFingerCount_Cam은 위의 위치에서 result.dat File을 읽어서 결과 화면에 출력해 준다.
